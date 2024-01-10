@@ -4,19 +4,75 @@
     <title>WEB1 - welcome</title>
     <meta charset="utf-8">
     <style>
-        a{
-          color:green;
+        body{
+          margin: 0;
         }
+        a{
+          color:black;
+          text-decoration: none;
+        }
+        h1{
+      font-size: 70px;
+      text-align: center;
+      border-bottom: 1px solid gray;
+      padding: 20px;
+      margin: 0;
+      display: block;
+        }
+
+        ol{
+          border-right: 1px solid gray;
+          width:100px;
+          margin: 0;
+          padding: 20px;
+        }
+
+        #grid{
+          display: grid;
+          grid-template-columns: 150px 1fr;
+        }
+        #grid ol
+        {
+          padding-left: 33px;
+        }
+        #grid #article{
+          padding-left: 25px;
+        }
+        @media(max-width:800px){
+          #grid{
+            display: block;
+          }
+          ol{
+            border-right: none;
+          }
+          h1{
+            border-bottom: none;
+          }
+        }
+
+
         </style>
   </head>
   <body>
-    <h1><a href="index.html">WEB</font></a></h1>
-    <ol>
-      <li><a href="1.html">HTML</font></a></li>
-      <li><a href="2.html">CSS</font></a></li>
-      <li><a href="3.html">JavaScript</font></a></li>
-    </ol>
-    <h2>HTML이란 무엇인가?<input type="checkbox"></h2>
+    <h1><a href="index.html">WEB</a></h1>
+
+
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ol>
+
+      <div id="article">
+        <h2>HTML, or Hypertext Markup Language, is a markup language for the web that defines the structure of web pages.
+
+It is one of the most basic building blocks of every website, so it's crucial to learn if you want to have a career in web development.
+
+In this article, I will walk you through what HTML is about in detail, how it does things on web pages, and we'll also touch on a really cool part of HTML – Semantic HTML.<input type="checkbox"></h2>
+      </div>
+    </div>
+
     <p>test<img src="1.jpg" width="100%"></p>
   </body>
 </html>
